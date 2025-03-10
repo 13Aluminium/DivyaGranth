@@ -2,16 +2,16 @@
 
 // Theme toggle functionality
 function toggleTheme() {
-  document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("light-mode"); // Changed from "dark-mode"
   // Save preference to localStorage
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  localStorage.setItem('darkMode', isDarkMode);
+  const isLightMode = document.body.classList.contains('light-mode');
+  localStorage.setItem('lightMode', isLightMode); // Changed from 'darkMode'
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize theme from localStorage
-  if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
+  if (localStorage.getItem('lightMode') === 'true') {
+    document.body.classList.add('light-mode');
   }
 
   // Check if we're on the shlok page
