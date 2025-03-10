@@ -1,11 +1,14 @@
 // server.js
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const { MongoClient } = require('mongodb');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGO_URL = 'mongodb+srv://Aluminium:13%40Aluminium@divyagranth.mvnhl.mongodb.net/';
+const MONGO_URL = process.env.MONGO_URI; // Use environment variable
+console.log('MongoDB URI:', MONGO_URL);
+console.log('MongoDB URI:', process.env.MONGO_URI);
 const DB_NAME = 'DivyaGranth'; // Change if needed
 
 let db;
