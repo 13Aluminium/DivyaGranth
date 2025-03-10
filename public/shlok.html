@@ -1,0 +1,56 @@
+<!-- public/shlok.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhagavad Gita - Shlok</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&family=Merriweather:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <meta name="description" content="Read and explore the Bhagavad Gita with Sanskrit text, transliteration, and translation.">
+  <!-- Add favicon -->
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <span class="theme-icon">☀/☾</span>
+  </button>
+
+  <div class="container">
+    <h2 id="chapter-title" class="chapter-heading">Loading...</h2>
+
+    <div class="shlok-section">
+      <p class="label"><strong>Sanskrit (Shlok):</strong></p>
+      <div id="shlok-text" class="sanskrit">
+        <div class="loading">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shlok-section">
+      <p class="label"><strong>Transliteration:</strong></p>
+      <div id="transliteration-text">Loading...</div>
+    </div>
+
+    <div class="shlok-section">
+      <p class="label"><strong>Translation:</strong></p>
+      <div id="translation-text">Loading...</div>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prev-btn">Previous</button>
+      <button id="next-btn">Next</button>
+    </div>
+    
+    <!-- Swipe indicator will be added via JS for mobile -->
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
